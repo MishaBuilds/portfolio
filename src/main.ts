@@ -89,6 +89,53 @@ if ('IntersectionObserver' in window) {
   qsa('.reveal').forEach((el) => el.classList.add('visible'));
 }
 
+/* ── Полоса прогресса скролла ─────────────────────────── */
+const progress = qs<HTMLElement>('#scrollProgress');
+let progressQueued = false;
+
+const updateProgress = (): void => {
+  progressQueued = false;
+  if (!progress) return;
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  const ratio = max > 0 ? Math.min(window.scrollY / max, 1) : 0;
+  progress.style.transform = `scaleX(${ratio.toFixed(4)})`;
+};
+
+window.addEventListener(
+  'scroll',
+  () => {
+    if (progressQueued) return;
+    progressQueued = true;
+    requestAnimationFrame(updateProgress);
+  },
+  { passive: true }
+);
+updateProgress();
+
+/* ── Свет за курсором на превью проектов ───────────────── */
+const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+const calmMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (finePointer && !calmMotion) {
+  qsa<HTMLElement>('.project-media').forEach((media) => {
+    let lightQueued = false;
+
+    media.addEventListener('pointermove', (event) => {
+      if (lightQueued) return;
+      lightQueued = true;
+      requestAnimationFrame(() => {
+        lightQueued = false;
+        const rect = media.getBoundingClientRect();
+        media.style.setProperty('--mx', `${event.clientX - rect.left}px`);
+        media.style.setProperty('--my', `${event.clientY - rect.top}px`);
+      });
+    });
+
+    media.addEventListener('pointerenter', () => media.classList.add('lit'));
+    media.addEventListener('pointerleave', () => media.classList.remove('lit'));
+  });
+}
+
 /* ── Год в подвале ───────────────────────────────────── */
 const yearEl = qs<HTMLElement>('#year');
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());

@@ -685,6 +685,298 @@ ol {
   transform: none;
 }
 
+/* Stagger: hero собирается по частям при загрузке */
+.hero .eyebrow.reveal { transition-delay: 0s; }
+.hero-title.reveal { transition-delay: 0.1s; }
+.hero-sub.reveal { transition-delay: 0.2s; }
+.hero-cta.reveal { transition-delay: 0.3s; }
+.hero-facts.reveal { transition-delay: 0.42s; }
+
+/* Stagger: соседние элементы секций */
+.service.reveal:nth-child(2) { transition-delay: 0.06s; }
+.service.reveal:nth-child(3) { transition-delay: 0.12s; }
+.service.reveal:nth-child(4) { transition-delay: 0.18s; }
+.who .reveal:nth-child(2) { transition-delay: 0.08s; }
+.who .reveal:nth-child(3) { transition-delay: 0.12s; }
+.who .reveal:nth-child(4) { transition-delay: 0.16s; }
+.steps .reveal:nth-child(2) { transition-delay: 0.08s; }
+.steps .reveal:nth-child(3) { transition-delay: 0.16s; }
+.steps .reveal:nth-child(4) { transition-delay: 0.24s; }
+.steps .reveal:nth-child(5) { transition-delay: 0.32s; }
+.contact-cards .reveal:nth-child(2) { transition-delay: 0.1s; }
+
+/* ── Живой фон: зерно + свет ───────────────────────────── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-wash {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-wash-1 {
+  width: 640px;
+  height: 640px;
+  right: -200px;
+  top: -180px;
+  background: radial-gradient(circle, rgba(35, 64, 216, 0.07), transparent 65%);
+  animation: wash-drift 26s ease-in-out infinite alternate;
+}
+
+.hero-wash-2 {
+  width: 520px;
+  height: 520px;
+  left: -220px;
+  bottom: -240px;
+  background: radial-gradient(circle, rgba(160, 140, 100, 0.06), transparent 65%);
+  animation: wash-drift 32s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes wash-drift {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(-60px, 50px) scale(1.08); }
+}
+
+#services {
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(23, 23, 28, 0.022) 20%,
+    rgba(23, 23, 28, 0.022) 80%,
+    transparent
+  );
+}
+
+/* ── Прогресс скролла ──────────────────────────────────── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 60;
+  pointer-events: none;
+}
+
+.scroll-progress span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+}
+
+/* ── Шапка: живое состояние ────────────────────────────── */
+.site-header {
+  transition: border-color 0.25s var(--ease), background-color 0.25s var(--ease);
+}
+
+.site-header.scrolled {
+  background: rgba(246, 245, 241, 0.96);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 0.25s var(--ease);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.footer-nav a {
+  position: relative;
+}
+
+.footer-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 0.25s var(--ease);
+}
+
+.footer-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ── Кнопки: физическое ощущение ───────────────────────── */
+.btn .btn-icon {
+  transition: transform 0.2s var(--ease);
+}
+
+.btn:hover .btn-icon {
+  transform: translateX(3px);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* ── Проекты: живой hover ──────────────────────────────── */
+.project {
+  transition: transform 0.35s var(--ease), border-color 0.35s var(--ease),
+    box-shadow 0.35s var(--ease);
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  border-color: var(--line-strong);
+  box-shadow: 0 24px 48px -28px rgba(23, 23, 28, 0.22);
+}
+
+.project-media {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-media img {
+  transition: transform 0.7s var(--ease), opacity 0.25s var(--ease);
+}
+
+.project:hover .project-media img {
+  transform: scale(1.035);
+}
+
+.project-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    320px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(255, 255, 255, 0.14),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+  pointer-events: none;
+}
+
+.project-media.lit::after {
+  opacity: 1;
+}
+
+.project-title {
+  transition: transform 0.3s var(--ease);
+}
+
+.project:hover .project-title {
+  transform: translateX(3px);
+}
+
+.project-facts li {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+}
+
+.project.visible .project-facts li {
+  opacity: 1;
+  transform: none;
+}
+
+.project.visible .project-facts li:nth-child(2) { transition-delay: 0.07s; }
+.project.visible .project-facts li:nth-child(3) { transition-delay: 0.14s; }
+.project.visible .project-facts li:nth-child(4) { transition-delay: 0.21s; }
+
+/* ── Услуги: живой список ──────────────────────────────── */
+.service {
+  transition: background-color 0.25s var(--ease);
+}
+
+.service:hover {
+  background: var(--surface);
+}
+
+.service-no {
+  transition: color 0.25s var(--ease);
+}
+
+.service:hover .service-no {
+  color: var(--accent);
+}
+
+.service h3 {
+  transition: transform 0.25s var(--ease);
+}
+
+.service:hover h3 {
+  transform: translateX(6px);
+}
+
+/* ── Процесс: линия проявляется ────────────────────────── */
+.step-no {
+  transition: color 0.3s var(--ease);
+}
+
+.steps li::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 0.8s var(--ease);
+}
+
+.steps li.visible::after {
+  transform: scaleX(1);
+}
+
+.steps li.visible .step-no {
+  color: var(--accent);
+}
+
+.steps li.visible:nth-child(2)::after { transition-delay: 0.08s; }
+.steps li.visible:nth-child(3)::after { transition-delay: 0.16s; }
+.steps li.visible:nth-child(4)::after { transition-delay: 0.24s; }
+.steps li.visible:nth-child(5)::after { transition-delay: 0.32s; }
+
+/* ── Контакты: финальный акцент ────────────────────────── */
+.contact-hint {
+  display: inline-block;
+  transition: transform 0.25s var(--ease);
+}
+
+.contact-card:hover .contact-hint {
+  transform: translateX(5px);
+}
+
 /* ── Адаптив ───────────────────────────────────────────── */
 @media (max-width: 960px) {
   .steps {
@@ -723,6 +1015,10 @@ ol {
     border-bottom: none;
   }
 
+  .nav-link::after {
+    display: none;
+  }
+
   .nav-actions .btn {
     display: none;
   }
@@ -733,6 +1029,28 @@ ol {
 
   .project-facts {
     grid-template-columns: 1fr;
+  }
+
+  /* На тач-устройствах — проще: без zoom и подъёма карточек */
+  .hero-wash {
+    animation: none;
+  }
+
+  .project:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .project:hover .project-media img {
+    transform: none;
+  }
+
+  .project:hover .project-title {
+    transform: none;
+  }
+
+  .service:hover h3 {
+    transform: none;
   }
 
   .who {
@@ -801,10 +1119,31 @@ ol {
     transition: none;
   }
 
+  .project-facts li {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero-wash {
+    animation: none;
+  }
+
+  .steps li::after,
+  .nav-link::after,
+  .footer-nav a::after {
+    transition: none;
+  }
+
+  .scroll-progress {
+    display: none;
+  }
+
   *,
   *::before,
   *::after {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
