@@ -58,8 +58,8 @@ npm run preview    # просмотр собранной версии локал
 
 ## Что нужно заполнить перед публикацией
 
-- [ ] `index.html`: имя в `<title>`, `og:*`, `canonical` — заменить
-      `session24`/`portfolio` на ваши реальные значения
+- [x] `index.html`: `og:*`, `canonical` — указаны как
+      `MishaBuilds`/`portfolio` (активируются после первого деплоя)
 - [ ] `index.html` → раздел «Контакты»: email и Telegram (`@yourusername`)
 - [ ] `src/main.ts`: константа `CONTACT_EMAIL`
 - [ ] Добавить `assets/og-cover.png` (картинка для соцсетей, 1200×630)
