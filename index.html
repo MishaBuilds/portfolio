@@ -1,0 +1,873 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title>Миша — веб-разработчик · Портфолио</title>
+    <meta
+      name="description"
+      content="Портфолио разработчика: интерактивные веб-приложения, 3D-визуализации, симуляции, браузерные инструменты и Telegram-боты. Проекты: 3D Maze, Rubik's Cube, Ant Colony Simulator."
+    />
+    <meta name="author" content="Миша" />
+    <meta name="theme-color" content="#0b0b12" />
+    <link rel="canonical" href="https://session24.github.io/portfolio/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Миша — веб-разработчик · Портфолио" />
+    <meta
+      property="og:description"
+      content="Интерактивные веб-приложения, 3D-визуализации и симуляции. Реальные проекты: 3D Maze, Rubik's Cube, Ant Colony Simulator."
+    />
+    <meta property="og:url" content="https://session24.github.io/portfolio/" />
+    <meta property="og:image" content="./assets/og-cover.png" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+    <!-- ══════════ НАВИГАЦИЯ ══════════ -->
+    <header class="site-header" id="siteHeader">
+      <div class="container nav-wrap">
+        <a class="logo" href="#home" aria-label="На главную">
+          <span class="logo-mark" aria-hidden="true"></span>
+          <span class="logo-text">Миша<span class="logo-dot">.</span></span>
+        </a>
+
+        <nav class="nav" id="mainNav" aria-label="Основная навигация">
+          <a class="nav-link" href="#services">Услуги</a>
+          <a class="nav-link" href="#projects">Проекты</a>
+          <a class="nav-link" href="#skills">Навыки</a>
+          <a class="nav-link" href="#process">Как я работаю</a>
+          <a class="nav-link" href="#contacts">Контакты</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="btn btn-small btn-primary" href="#contacts">Связаться</a>
+          <button
+            class="burger"
+            id="burger"
+            type="button"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+            aria-controls="mainNav"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ══════════ ГЛАВНЫЙ ЭКРАН ══════════ -->
+      <section class="hero" id="home">
+        <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+        <div class="hero-grid" aria-hidden="true"></div>
+
+        <div class="container hero-inner">
+          <p class="hero-eyebrow reveal">Портфолио · Веб-разработка · 3D · Симуляции</p>
+
+          <h1 class="hero-title reveal">
+            Создаю интерактивные<br />
+            <span class="gradient-text">веб-приложения</span><br />
+            и визуализации
+          </h1>
+
+          <p class="hero-sub reveal">
+            Разработчик на TypeScript и Python. Проектирую и строю интерактивные
+            веб-приложения, 3D-визуализации, симуляции и браузерные инструменты —
+            от идеи до публикации.
+          </p>
+
+          <div class="hero-cta reveal">
+            <a class="btn btn-primary btn-lg" href="#projects">
+              Проекты
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a class="btn btn-outline btn-lg" href="#contacts">Связаться</a>
+          </div>
+
+          <dl class="hero-stats reveal">
+            <div class="stat">
+              <dt class="stat-value"><span class="counter" data-target="9">0</span></dt>
+              <dd class="stat-label">готовых проектов</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat-value"><span class="counter" data-target="60">0</span><span class="stat-unit"> FPS</span></dt>
+              <dd class="stat-label">в 3D-сценах</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat-value"><span class="counter" data-target="1000">0</span><span class="stat-unit">³</span></dt>
+              <dd class="stat-label">макс. размер куба</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat-value"><span class="counter" data-target="5000">0</span></dt>
+              <dd class="stat-label">муравьёв в симуляции</dd>
+            </div>
+          </dl>
+        </div>
+
+        <a class="scroll-hint" href="#services" aria-label="Листайте вниз">
+          <span class="scroll-hint-line" aria-hidden="true"></span>
+        </a>
+      </section>
+
+      <!-- ══════════ УСЛУГИ ══════════ -->
+      <section class="section" id="services">
+        <div class="container">
+          <header class="section-head reveal">
+            <p class="section-eyebrow">Услуги</p>
+            <h2 class="section-title">Чем могу быть полезен</h2>
+            <p class="section-sub">
+              Все направления подтверждены реальными завершёнными проектами —
+              не абстрактные обещания, а то, что уже сделано и работает.
+            </p>
+          </header>
+
+          <ul class="services-grid">
+            <li class="service-card reveal">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M7 14h4"/><path d="M7 17h7"/></svg>
+              </div>
+              <h3>Сайты и лендинги</h3>
+              <p>Адаптивные сайты под ключ: от структуры и дизайна до production-сборки и публикации.</p>
+            </li>
+
+            <li class="service-card reveal">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6"/><path d="m16 6 6 6-6 6"/><path d="M13 4 11 20"/></svg>
+              </div>
+              <h3>Интерактивные веб-приложения</h3>
+              <p>Клиентские приложения на TypeScript: управление состоянием, анимации, плавный UI без фреймворкового оверкея.</p>
+            </li>
+
+            <li class="service-card reveal">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>
+              </div>
+              <h3>3D-визуализации</h3>
+              <p>Three.js и WebGL2: инстансинг, шейдеры, bloom-эффекты, десятки тысяч объектов на 60 FPS.</p>
+            </li>
+
+            <li class="service-card reveal">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/><circle cx="19" cy="7" r="1.6"/></svg>
+              </div>
+              <h3>Симуляции и калькуляторы</h3>
+              <p>Алгоритмические инструменты: генерация, поиск пути, агентные модели, точная математика и визуализация шагов.</p>
+            </li>
+
+            <li class="service-card reveal">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M9 9h6v6H9z"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M2 12h2"/><path d="M20 12h2"/></svg>
+              </div>
+              <h3>Браузерные инструменты и расширения</h3>
+              <p>Chrome-расширения (Manifest V3): контент-скрипты, service workers, связь с локальным сервисом.</p>
+            </li>
+
+            <li class="service-card reveal">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.4c-1.5 0-3-.4-4.2-1L3 20l1.2-4.9A8.4 8.4 0 1 1 21 11.5Z"/><path d="M9 10.5h.01"/><path d="M12 10.5h.01"/><path d="M15 10.5h.01"/></svg>
+              </div>
+              <h3>Telegram-боты и Mini Apps</h3>
+              <p>Боты на Python с базами данных и веб-приложениями внутри Telegram: заказы, запись, корзина.</p>
+            </li>
+
+            <li class="service-card reveal">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 6L3 18l3 3 5.7-5.7a4.5 4.5 0 0 0 6-6L14 13l-3-3 3.7-3.7Z"/></svg>
+              </div>
+              <h3>Доработка существующих сайтов</h3>
+              <p>Фичи, оптимизация, исправление багов, адаптив и доступность — без переписывания с нуля.</p>
+            </li>
+
+            <li class="service-card service-card-cta reveal">
+              <p class="service-card-cta-text">Есть идея или задача? Давайте обсудим — оценю объём и предложу решение.</p>
+              <a class="btn btn-primary" href="#contacts">Обсудить проект</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════ ПРОЕКТЫ ══════════ -->
+      <section class="section section-alt" id="projects">
+        <div class="container">
+          <header class="section-head reveal">
+            <p class="section-eyebrow">Портфолио</p>
+            <h2 class="section-title">Мои проекты</h2>
+            <p class="section-sub">
+              Реальные завершённые работы. Каждый проект — с описанием, технологиями
+              и ссылками, где он опубликован.
+            </p>
+          </header>
+
+          <div class="filters reveal" role="group" aria-label="Фильтр проектов">
+            <button class="chip chip-active" type="button" data-filter="all" aria-pressed="true">Все</button>
+            <button class="chip" type="button" data-filter="web3d" aria-pressed="false">3D и симуляции</button>
+            <button class="chip" type="button" data-filter="tools" aria-pressed="false">Инструменты</button>
+            <button class="chip" type="button" data-filter="bots" aria-pressed="false">Боты и Mini Apps</button>
+            <button class="chip" type="button" data-filter="dev" aria-pressed="false">В разработке</button>
+          </div>
+
+          <div class="projects-grid" id="projectsGrid">
+
+            <!-- ─────── 3D MAZE ─────── -->
+            <article class="project-card reveal" data-category="web3d">
+              <div class="project-preview preview-maze">
+                <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <rect width="400" height="250" fill="#0a0f1e"/>
+                  <g stroke="#1d3a5f" stroke-width="2" stroke-linecap="round">
+                    <path d="M40 40 H360 M40 40 V210 M360 40 V210 M40 210 H360"/>
+                    <path d="M100 40 V130 M100 130 H180 M180 130 V210 M180 210 H260 M260 210 V130 M260 130 H360"/>
+                    <path d="M140 40 V90 M140 90 H220 M220 90 V160 M220 160 H300 M300 160 V210"/>
+                    <path d="M40 100 H80 M80 100 V170 M80 170 H140"/>
+                    <path d="M180 40 V70 M180 70 H300 M300 70 V120 M300 120 H360"/>
+                  </g>
+                  <path d="M40 40 V130 H180 V210 H260 V130 H360" fill="none" stroke="#22d3ee" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M40 40 V130 H180 V210 H260 V130 H360" fill="none" stroke="#22d3ee" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity="0.25"/>
+                  <circle r="5" fill="#a7f3d0">
+                    <animateMotion dur="5s" repeatCount="indefinite" path="M40 40 V130 H180 V210 H260 V130 H360"/>
+                  </circle>
+                  <g font-family="monospace" font-size="10" fill="#3b82a6">
+                    <text x="14" y="238">RANDOMIZED DFS</text>
+                    <text x="386" y="238" text-anchor="end">BFS · PATHFINDING</text>
+                  </g>
+                </svg>
+                <span class="project-status status-live">Опубликован</span>
+              </div>
+              <div class="project-body">
+                <h3>3D Maze</h3>
+                <p class="project-desc">
+                  Интерактивный 3D-визуализатор генерации лабиринта (Randomized DFS)
+                  и поиска пути (BFS) в реальном времени.
+                </p>
+                <ul class="project-features">
+                  <li>Алгоритмы выполняются в Web Worker — UI не блокируется</li>
+                  <li>Размеры от 10×10 до 200×200 (40 000 клеток) на 60 FPS</li>
+                  <li>Пауза, пошаговый режим, скорость 0.5×–10×, статистика вживую</li>
+                </ul>
+                <div class="project-tech">
+                  <span>TypeScript</span><span>Three.js</span><span>Web Workers</span><span>Vite</span>
+                </div>
+                <div class="project-links">
+                  <a class="btn btn-primary btn-small" href="https://session24.github.io/3d-maze/" target="_blank" rel="noopener noreferrer">
+                    Открыть проект
+                    <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+                  </a>
+                  <a class="btn btn-ghost btn-small" href="https://github.com/session24/3d-maze" target="_blank" rel="noopener noreferrer">
+                    <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C17.2 4.7 18.2 5 18.2 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .4.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.6 18.4.5 12 .5Z"/></svg>
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- ─────── SORTING VISUALIZER ─────── -->
+            <article class="project-card reveal" data-category="web3d">
+              <div class="project-preview preview-sorting">
+                <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <rect width="400" height="250" fill="#0a0a14"/>
+                  <g stroke="#1b1b30" stroke-width="1">
+                    <path d="M0 120 H400 M0 165 H400 M0 225 H400"/>
+                    <path d="M200 120 L140 225 M200 120 L260 225 M170 120 L110 225 M230 120 L290 225"/>
+                  </g>
+                  <g>
+                    <rect x="34" y="98" width="16" height="22" fill="#4a3f8f"/>
+                    <rect x="62" y="86" width="16" height="34" fill="#4a3f8f"/>
+                    <rect x="90" y="104" width="16" height="16" fill="#4a3f8f"/>
+                    <rect x="118" y="78" width="16" height="42" fill="#4a3f8f"/>
+                    <rect x="146" y="92" width="16" height="28" fill="#4a3f8f"/>
+                    <rect x="174" y="70" width="16" height="50" fill="#4a3f8f"/>
+                    <rect x="202" y="88" width="16" height="32" fill="#4a3f8f"/>
+                    <rect x="230" y="100" width="16" height="20" fill="#4a3f8f"/>
+                  </g>
+                  <g>
+                    <rect x="46" y="62" width="20" height="103" fill="#5b4fbf"/>
+                    <rect x="80" y="44" width="20" height="121" fill="#5b4fbf"/>
+                    <rect x="114" y="70" width="20" height="95" fill="#5b4fbf"/>
+                    <rect x="148" y="36" width="20" height="129" fill="#5b4fbf"/>
+                    <rect x="182" y="56" width="20" height="109" fill="#5b4fbf"/>
+                    <rect x="216" y="28" width="20" height="137" fill="#fbbf24">
+                      <animate attributeName="opacity" values="1;0.55;1" dur="1.6s" repeatCount="indefinite"/>
+                    </rect>
+                    <rect x="250" y="50" width="20" height="115" fill="#ef4444">
+                      <animate attributeName="opacity" values="1;0.5;1" dur="1.2s" repeatCount="indefinite"/>
+                    </rect>
+                    <rect x="284" y="66" width="20" height="99" fill="#5b4fbf"/>
+                    <rect x="318" y="40" width="20" height="125" fill="#34d399"/>
+                  </g>
+                  <g>
+                    <rect x="30" y="150" width="24" height="75" fill="#7c6cff"/>
+                    <rect x="68" y="128" width="24" height="97" fill="#6f7eff"/>
+                    <rect x="106" y="158" width="24" height="67" fill="#628fff"/>
+                    <rect x="144" y="112" width="24" height="113" fill="#54a0ff"/>
+                    <rect x="182" y="140" width="24" height="85" fill="#46b1ff"/>
+                    <rect x="220" y="120" width="24" height="105" fill="#38c2fc"/>
+                    <rect x="258" y="148" width="24" height="77" fill="#2ad3f8"/>
+                    <rect x="296" y="132" width="24" height="93" fill="#1ee4f0"/>
+                    <rect x="334" y="118" width="24" height="107" fill="#34d399"/>
+                    <rect x="358" y="126" width="24" height="99" fill="#34d399"/>
+                  </g>
+                  <g font-family="monospace" font-size="10" fill="#3b82a6">
+                    <text x="14" y="238">BUBBLE · QUICK · MERGE · HEAP</text>
+                    <text x="386" y="238" text-anchor="end">10 000 ELEMENTS · 1 DRAW CALL</text>
+                  </g>
+                </svg>
+                <span class="project-status status-live">Опубликован</span>
+              </div>
+              <div class="project-body">
+                <h3>Sorting Visualizer</h3>
+                <p class="project-desc">
+                  Интерактивный 3D-визуализатор алгоритмов сортировки:
+                  реальная сортировка массивов до 100 000 элементов —
+                  каждое сравнение и обмен видны вживую.
+                </p>
+                <ul class="project-features">
+                  <li>4 алгоритма (Bubble, Quick, Merge, Heap) — настоящий поток операций, не анимация-подмена</li>
+                  <li>Compare Mode: гонка 2–4 алгоритмов на одном массиве с вердиктами</li>
+                  <li>До 100 000 элементов: один InstancedMesh, один draw call, UI не блокируется</li>
+                  <li>Benchmark Lab: многозапусковые замеры, лидерборды, графики, экспорт CSV/JSON</li>
+                </ul>
+                <div class="project-tech">
+                  <span>TypeScript</span><span>Three.js</span><span>WebGL</span><span>Vite</span><span>Vitest</span>
+                </div>
+                <div class="project-links">
+                  <a class="btn btn-primary btn-small" href="https://session24.github.io/sorting-visualizer/" target="_blank" rel="noopener noreferrer">
+                    Открыть проект
+                    <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+                  </a>
+                  <a class="btn btn-ghost btn-small" href="https://github.com/Session24/sorting-visualizer" target="_blank" rel="noopener noreferrer">
+                    <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C17.2 4.7 18.2 5 18.2 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .4.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.6 18.4.5 12 .5Z"/></svg>
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- ─────── RUBIK'S CUBE ─────── -->
+            <article class="project-card reveal" data-category="web3d">
+              <div class="project-preview preview-cube">
+                <div class="cube-scene" aria-hidden="true">
+                  <div class="cube">
+                    <div class="cube-face cube-front"></div>
+                    <div class="cube-face cube-back"></div>
+                    <div class="cube-face cube-right"></div>
+                    <div class="cube-face cube-left"></div>
+                    <div class="cube-face cube-top"></div>
+                    <div class="cube-face cube-bottom"></div>
+                  </div>
+                </div>
+                <div class="preview-cube-shadow" aria-hidden="true"></div>
+                <span class="project-status status-completed">Завершён</span>
+              </div>
+              <div class="project-body">
+                <h3>3D Rubik's Cube</h3>
+                <p class="project-desc">
+                  Масштабируемый куб N×N×N (до 1000×1000×1000) с физической
+                  анимацией слоёв и вычислительным solver'ом.
+                </p>
+                <ul class="project-features">
+                  <li>WebGL2-рендерер: 6 статичных quad'ов + 1 движущаяся плита — O(1) draw calls</li>
+                  <li>Компактное состояние: 6 × N² байт, без N³ объектов</li>
+                  <li>Solver инвертирует историю ходов и работает в Web Worker</li>
+                </ul>
+                <div class="project-tech">
+                  <span>TypeScript</span><span>Three.js</span><span>WebGL2</span><span>Vitest</span>
+                </div>
+                <div class="project-links">
+                  <span class="project-note">Ссылки появятся после публикации</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- ─────── ANT COLONY ─────── -->
+            <article class="project-card reveal" data-category="web3d">
+              <div class="project-preview preview-ants">
+                <img src="./assets/ant-colony.jpg" alt="Скриншот Ant Colony Simulator: феромоновые тропы муравьёв на тёмном фоне" loading="lazy" />
+                <span class="project-status status-completed">Завершён</span>
+              </div>
+              <div class="project-body">
+                <h3>Ant Colony Simulator</h3>
+                <p class="project-desc">
+                  Симуляция самоорганизации колонии муравьёв: стигмергия, феромоновые
+                  тропы и эмерджентное построение коротких маршрутов — без лидера
+                  и общего плана.
+                </p>
+                <ul class="project-features">
+                  <li>Реальная модель: феромон растекается, испаряется и диффундирует</li>
+                  <li>6 сценариев, режим инспекции муравья, раскраска троп</li>
+                  <li>До 5000 муравьёв, скорость 0.25×–50×, камера и live-статистика</li>
+                </ul>
+                <div class="project-tech">
+                  <span>TypeScript</span><span>Canvas 2D</span><span>ES-модули</span>
+                </div>
+                <div class="project-links">
+                  <span class="project-note">Ссылки появятся после публикации</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- ─────── YOUTUBE DOWNLOADER ─────── -->
+            <article class="project-card reveal" data-category="tools">
+              <div class="project-preview preview-yt">
+                <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <rect width="400" height="250" fill="#0c0c14"/>
+                  <rect x="24" y="30" width="352" height="190" rx="12" fill="#14141f" stroke="#262638"/>
+                  <rect x="40" y="46" width="196" height="110" rx="8" fill="#1d1d2e"/>
+                  <path d="M118 86 L150 101 L118 116 Z" fill="#ff4e45"/>
+                  <g stroke="#2c2c42" stroke-width="3" stroke-linecap="round">
+                    <path d="M252 60 H376"/><path d="M252 78 H340"/><path d="M252 96 H360"/>
+                    <path d="M252 128 H376"/><path d="M252 146 H322"/>
+                  </g>
+                  <rect x="40" y="172" width="320" height="8" rx="4" fill="#1d1d2e"/>
+                  <rect x="40" y="172" width="96" height="8" rx="4" fill="#7c6cff"/>
+                  <g font-family="monospace" font-size="9" fill="#565670">
+                    <text x="40" y="204">CONTENT SCRIPT · MANIFEST V3</text>
+                    <text x="40" y="218">FLASK + YT-DLP + FFMPEG</text>
+                  </g>
+                  <circle cx="366" cy="58" r="10" fill="#ff4e45"/>
+                  <path d="M362 53 L372 58 L362 63 Z" fill="#fff"/>
+                </svg>
+                <span class="project-status status-tool">Рабочий инструмент</span>
+              </div>
+              <div class="project-body">
+                <h3>YouTube Downloader</h3>
+                <p class="project-desc">
+                  Chrome-расширение (Manifest V3) + локальный Python-сервис:
+                  скачивание видео и аудио с YouTube через yt-dlp.
+                </p>
+                <ul class="project-features">
+                  <li>Кнопка «Скачать» прямо на странице видео, меню качеств</li>
+                  <li>Аудио (m4a) и видео со склейкой через FFmpeg</li>
+                  <li>Обмен сообщениями расширение ↔ Flask-сервис, SPA-навигация YouTube</li>
+                </ul>
+                <div class="project-tech">
+                  <span>Chrome Extension</span><span>JavaScript</span><span>Python</span><span>Flask</span>
+                </div>
+                <div class="project-links">
+                  <span class="project-note">Локальный инструмент · ссылки после публикации</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- ─────── FOODFLOW ─────── -->
+            <article class="project-card reveal" data-category="bots">
+              <div class="project-preview preview-food">
+                <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <rect width="400" height="250" fill="#0b0f0d"/>
+                  <rect x="140" y="18" width="120" height="214" rx="20" fill="#101412" stroke="#26312c"/>
+                  <rect x="148" y="30" width="104" height="14" rx="7" fill="#1a201d"/>
+                  <g>
+                    <rect x="156" y="56" width="88" height="34" rx="8" fill="#1a241f" stroke="#2c3d34"/>
+                    <circle cx="170" cy="73" r="7" fill="#ff9f43"/>
+                    <rect x="184" y="66" width="50" height="5" rx="2.5" fill="#3d5546"/>
+                    <rect x="184" y="76" width="34" height="4" rx="2" fill="#2c3d34"/>
+                  </g>
+                  <g>
+                    <rect x="156" y="98" width="88" height="34" rx="8" fill="#1a241f" stroke="#2c3d34"/>
+                    <circle cx="170" cy="115" r="7" fill="#ff6b6b"/>
+                    <rect x="184" y="108" width="50" height="5" rx="2.5" fill="#3d5546"/>
+                    <rect x="184" y="118" width="34" height="4" rx="2" fill="#2c3d34"/>
+                  </g>
+                  <g>
+                    <rect x="156" y="140" width="88" height="34" rx="8" fill="#1a241f" stroke="#2c3d34"/>
+                    <circle cx="170" cy="157" r="7" fill="#4ecdc4"/>
+                    <rect x="184" y="150" width="50" height="5" rx="2.5" fill="#3d5546"/>
+                    <rect x="184" y="160" width="34" height="4" rx="2" fill="#2c3d34"/>
+                  </g>
+                  <rect x="156" y="192" width="88" height="24" rx="12" fill="#2ea44f"/>
+                  <text x="200" y="208" font-family="sans-serif" font-size="10" fill="#fff" text-anchor="middle">Оформить</text>
+                  <g font-family="monospace" font-size="9" fill="#4c6b5c">
+                    <text x="20" y="240">FASTAPI · SQLITE · TELEGRAM MINI APP</text>
+                  </g>
+                </svg>
+                <span class="project-status status-demo">Демо-проект</span>
+              </div>
+              <div class="project-body">
+                <h3>FoodFlow</h3>
+                <p class="project-desc">
+                  Telegram-бот и Mini App для заказа еды: каталог, корзина,
+                  оформление заказа и валидация Telegram initData.
+                </p>
+                <ul class="project-features">
+                  <li>Mini App: категории, карточки блюд, корзина с пересчётом суммы</li>
+                  <li>Backend валидирует HMAC-подпись initData и пересчитывает цену по БД</li>
+                  <li>FastAPI + SQLite: API каталога и заказов, уведомления от бота</li>
+                </ul>
+                <div class="project-tech">
+                  <span>Python</span><span>FastAPI</span><span>Telegram API</span><span>SQLite</span>
+                </div>
+                <div class="project-links">
+                  <span class="project-note">Ссылки появятся после публикации</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- ─────── BARBERFLOW ─────── -->
+            <article class="project-card reveal" data-category="bots">
+              <div class="project-preview preview-barber">
+                <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <rect width="400" height="250" fill="#0d0b10"/>
+                  <rect x="130" y="20" width="140" height="210" rx="20" fill="#14101a" stroke="#2b2438"/>
+                  <rect x="138" y="32" width="124" height="14" rx="7" fill="#1e1829"/>
+                  <text x="200" y="70" font-family="sans-serif" font-size="11" fill="#c9b8ff" text-anchor="middle">Запись на стрижку</text>
+                  <g font-family="monospace" font-size="8" fill="#6b5f82" text-anchor="middle">
+                    <text x="142" y="92">ПН</text><text x="170" y="92">ВТ</text><text x="198" y="92">СР</text><text x="226" y="92">ЧТ</text><text x="254" y="92">ПТ</text>
+                  </g>
+                  <g>
+                    <rect x="140" y="98" width="26" height="24" rx="5" fill="#1e1829"/>
+                    <rect x="168" y="98" width="26" height="24" rx="5" fill="#1e1829"/>
+                    <rect x="196" y="98" width="26" height="24" rx="5" fill="#7c6cff"/>
+                    <text x="209" y="114" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">14</text>
+                    <rect x="224" y="98" width="26" height="24" rx="5" fill="#1e1829"/>
+                    <rect x="252" y="98" width="26" height="24" rx="5" fill="#1e1829"/>
+                  </g>
+                  <g font-family="monospace" font-size="8" fill="#8f86ad">
+                    <text x="153" y="140" fill="#4ade80">10:00 ✓</text>
+                    <text x="209" y="140">11:30</text>
+                    <text x="265" y="140">13:00</text>
+                    <text x="153" y="160">14:30</text>
+                    <text x="209" y="160" fill="#f87171">16:00 ✗</text>
+                    <text x="265" y="160">17:30</text>
+                  </g>
+                  <rect x="146" y="186" width="108" height="26" rx="13" fill="#7c6cff"/>
+                  <text x="200" y="203" font-family="sans-serif" font-size="10" fill="#fff" text-anchor="middle">Записаться</text>
+                  <g font-family="monospace" font-size="9" fill="#574d70">
+                    <text x="20" y="240">TELEGRAM BOT · SQLITE · BEGIN IMMEDIATE</text>
+                  </g>
+                </svg>
+                <span class="project-status status-demo">Демо-проект</span>
+              </div>
+              <div class="project-body">
+                <h3>BarberFlow</h3>
+                <p class="project-desc">
+                  Telegram-бот записи в барбершоп: выбор услуги, мастера, даты и
+                  времени с защитой слотов от двойного бронирования.
+                </p>
+                <ul class="project-features">
+                  <li>Сценарий записи: услуга → мастер → дата → время → подтверждение</li>
+                  <li>Атомарное бронирование слотов (транзакция BEGIN IMMEDIATE)</li>
+                  <li>«Моя запись» и отмена — слот мгновенно снова свободен</li>
+                </ul>
+                <div class="project-tech">
+                  <span>Python</span><span>Telegram API</span><span>SQLite</span><span>Inline-кнопки</span>
+                </div>
+                <div class="project-links">
+                  <span class="project-note">Ссылки появятся после публикации</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- ─────── TX12 DARK SECTOR ─────── -->
+            <article class="project-card reveal" data-category="dev">
+              <div class="project-preview preview-fps">
+                <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <rect width="400" height="250" fill="#050805"/>
+                  <g fill="none" stroke="#1f5c3a" stroke-width="2">
+                    <rect x="60" y="20" width="280" height="210"/>
+                    <rect x="90" y="45" width="220" height="160"/>
+                    <rect x="118" y="68" width="164" height="114"/>
+                    <rect x="142" y="88" width="116" height="74"/>
+                    <rect x="162" y="104" width="76" height="42"/>
+                    <rect x="178" y="116" width="44" height="18"/>
+                  </g>
+                  <g stroke="#37d67a" stroke-width="1.5" opacity="0.8">
+                    <path d="M200 125 L60 20 M200 125 L340 20 M200 125 L60 230 M200 125 L340 230"/>
+                    <path d="M200 125 L90 45 M200 125 L310 45 M200 125 L90 205 M200 125 L310 205"/>
+                  </g>
+                  <circle cx="200" cy="125" r="3" fill="#7dffb0"/>
+                  <g font-family="monospace" font-size="9" fill="#2f8f5b">
+                    <text x="16" y="240">RAYCASTING · 128×64 LCD · EDGE LUA</text>
+                    <text x="384" y="240" text-anchor="end">v0.5.0-S5</text>
+                  </g>
+                </svg>
+                <span class="project-status status-dev">В разработке</span>
+              </div>
+              <div class="project-body">
+                <h3>TX12: DARK SECTOR</h3>
+                <p class="project-desc">
+                  Атмосферная 2.5D FPS-игра на raycasting в стиле раннего Doom —
+                  полностью на Lua для радиостанции RadioMaster TX12 (EdgeTX).
+                </p>
+                <ul class="project-features">
+                  <li>Полный цикл: карта → загрузчик уровней → игрок → коллизии → raycast → 3D-мир</li>
+                  <li>Укладывается в 60 КБ кучи и 50 мс кадра EdgeTX</li>
+                  <li>283 автоматические проверки на desktop-тестах</li>
+                </ul>
+                <div class="project-tech">
+                  <span>Lua</span><span>EdgeTX</span><span>Raycasting</span><span>Embedded</span>
+                </div>
+                <div class="project-links">
+                  <span class="project-note">Этап 5 · ожидает проверки на радио</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- ─────── COACHESS ─────── -->
+            <article class="project-card reveal" data-category="dev">
+              <div class="project-preview preview-chess">
+                <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <rect width="400" height="250" fill="#0a0a0e"/>
+                  <g transform="translate(120 25)">
+                    <rect width="160" height="160" fill="#171721"/>
+                    <g fill="#232333">
+                      <rect x="0" y="0" width="20" height="20"/><rect x="40" y="0" width="20" height="20"/><rect x="80" y="0" width="20" height="20"/><rect x="120" y="0" width="20" height="20"/>
+                      <rect x="20" y="20" width="20" height="20"/><rect x="60" y="20" width="20" height="20"/><rect x="100" y="20" width="20" height="20"/><rect x="140" y="20" width="20" height="20"/>
+                      <rect x="0" y="40" width="20" height="20"/><rect x="40" y="40" width="20" height="20"/><rect x="80" y="40" width="20" height="20"/><rect x="120" y="40" width="20" height="20"/>
+                      <rect x="20" y="60" width="20" height="20"/><rect x="60" y="60" width="20" height="20"/><rect x="100" y="60" width="20" height="20"/><rect x="140" y="60" width="20" height="20"/>
+                      <rect x="0" y="80" width="20" height="20"/><rect x="40" y="80" width="20" height="20"/><rect x="80" y="80" width="20" height="20"/><rect x="120" y="80" width="20" height="20"/>
+                      <rect x="20" y="100" width="20" height="20"/><rect x="60" y="100" width="20" height="20"/><rect x="100" y="100" width="20" height="20"/><rect x="140" y="100" width="20" height="20"/>
+                      <rect x="0" y="120" width="20" height="20"/><rect x="40" y="120" width="20" height="20"/><rect x="80" y="120" width="20" height="20"/><rect x="120" y="120" width="20" height="20"/>
+                      <rect x="20" y="140" width="20" height="20"/><rect x="60" y="140" width="20" height="20"/><rect x="100" y="140" width="20" height="20"/><rect x="140" y="140" width="20" height="20"/>
+                    </g>
+                    <circle cx="40" cy="140" r="7" fill="#e8e8f2"/>
+                    <circle cx="120" cy="60" r="7" fill="#7c6cff"/>
+                    <circle cx="100" cy="100" r="6" fill="#7c6cff" opacity="0.6"/>
+                    <rect x="56" y="56" width="28" height="28" fill="none" stroke="#7c6cff" stroke-width="2" stroke-dasharray="5 4" opacity="0.9"/>
+                  </g>
+                  <g font-family="monospace" font-size="9" fill="#565670">
+                    <text x="20" y="238">CHESS + AI COACH · ES MODULES</text>
+                    <text x="380" y="238" text-anchor="end" fill="#a78bfa">v0.1.0</text>
+                  </g>
+                </svg>
+                <span class="project-status status-dev">В разработке</span>
+              </div>
+              <div class="project-body">
+                <h3>CoaChess</h3>
+                <p class="project-desc">
+                  Веб-приложение для шахмат с AI-тренером: доска, подсказки и
+                  разбор партий. Архитектура готова — сейчас добавляется логика.
+                </p>
+                <ul class="project-features">
+                  <li>Централизованное состояние с pub/sub, доска рендерится из state</li>
+                  <li>Модули под движок, AI-тренера и анализатора уже заложены</li>
+                  <li>Тёмная тема, адаптивная сетка, локальное сохранение</li>
+                </ul>
+                <div class="project-tech">
+                  <span>JavaScript</span><span>ES-модули</span><span>HTML/CSS</span>
+                </div>
+                <div class="project-links">
+                  <span class="project-note">Версия 0.1.0 · логика в разработке</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <p class="projects-empty" id="projectsEmpty" hidden>
+            В этой категории пока нет проектов.
+          </p>
+        </div>
+      </section>
+
+      <!-- ══════════ НАВЫКИ ══════════ -->
+      <section class="section" id="skills">
+        <div class="container">
+          <header class="section-head reveal">
+            <p class="section-eyebrow">Навыки</p>
+            <h2 class="section-title">Технологии и направления</h2>
+            <p class="section-sub">
+              Каждый пункт стека подтверждён кодом в реальных проектах —
+              не просто список желаемого.
+            </p>
+          </header>
+
+          <div class="skills-grid">
+            <div class="skill-group reveal">
+              <h3>Языки</h3>
+              <div class="tag-cloud">
+                <span class="tag">TypeScript</span><span class="tag">JavaScript (ES-модули)</span><span class="tag">Python</span><span class="tag">Lua</span><span class="tag">HTML5</span><span class="tag">CSS3</span>
+              </div>
+            </div>
+
+            <div class="skill-group reveal">
+              <h3>Frontend и интерактив</h3>
+              <div class="tag-cloud">
+                <span class="tag">Vite</span><span class="tag">Canvas 2D</span><span class="tag">Web Workers</span><span class="tag">WebGL2</span><span class="tag">Three.js</span><span class="tag">Инстансинг</span><span class="tag">Анимации</span>
+              </div>
+            </div>
+
+            <div class="skill-group reveal">
+              <h3>Backend и API</h3>
+              <div class="tag-cloud">
+                <span class="tag">FastAPI</span><span class="tag">Flask</span><span class="tag">SQLite</span><span class="tag">REST API</span><span class="tag">Telegram Bot API</span><span class="tag">Telegram Mini Apps</span>
+              </div>
+            </div>
+
+            <div class="skill-group reveal">
+              <h3>Инструменты и практики</h3>
+              <div class="tag-cloud">
+                <span class="tag">Chrome Extension (MV3)</span><span class="tag">yt-dlp</span><span class="tag">FFmpeg</span><span class="tag">Git</span><span class="tag">GitHub Pages</span><span class="tag">Vitest</span><span class="tag">node --test</span><span class="tag">Алгоритмы: DFS · BFS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-note reveal">
+            <strong>Направления:</strong> интерактивные визуализации · агентные симуляции ·
+            генерация и поиск пути · браузерные инструменты · чат-боты с бизнес-логикой
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════ КАК Я РАБОТАЮ ══════════ -->
+      <section class="section section-alt" id="process">
+        <div class="container">
+          <header class="section-head reveal">
+            <p class="section-eyebrow">Процесс</p>
+            <h2 class="section-title">Как я работаю</h2>
+            <p class="section-sub">
+              Прозрачный процесс от идеи до опубликованного результата —
+              вы всегда понимаете, на каком этапе находится проект.
+            </p>
+          </header>
+
+          <ol class="process-steps">
+            <li class="process-step reveal">
+              <span class="process-num" aria-hidden="true">01</span>
+              <h3>Идея</h3>
+              <p>Разбираем задачу: цели, аудитория, ключевые сценарии. Формулируем, что именно должно получиться.</p>
+            </li>
+            <li class="process-step reveal">
+              <span class="process-num" aria-hidden="true">02</span>
+              <h3>Планирование</h3>
+              <p>Структура, стек и архитектура. Оценка объёма, этапы и критерии готовности — до первой строки кода.</p>
+            </li>
+            <li class="process-step reveal">
+              <span class="process-num" aria-hidden="true">03</span>
+              <h3>Разработка</h3>
+              <p>Чистый TypeScript/Python, модульная структура, production-сборка. Промежуточные сборки — на каждом этапе.</p>
+            </li>
+            <li class="process-step reveal">
+              <span class="process-num" aria-hidden="true">04</span>
+              <h3>Тестирование</h3>
+              <p>Автотесты на ядро логики, ручная проверка сценариев, адаптив, производительность и чистая консоль.</p>
+            </li>
+            <li class="process-step reveal">
+              <span class="process-num" aria-hidden="true">05</span>
+              <h3>Публикация</h3>
+              <p>Деплой на GitHub Pages или ваш хостинг, SEO-разметка, домен при необходимости — и инструкции для вас.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ══════════ КОНТАКТЫ ══════════ -->
+      <section class="section" id="contacts">
+        <div class="container contacts-wrap">
+          <header class="section-head reveal">
+            <p class="section-eyebrow">Контакты</p>
+            <h2 class="section-title">Давайте обсудим ваш проект</h2>
+            <p class="section-sub">
+              Опишите задачу — отвечу в течение дня: оценю объём, предложу
+              стек и план. Работаю с отзывами и по техзаданию.
+            </p>
+          </header>
+
+          <div class="contacts-grid">
+            <div class="contacts-info reveal">
+              <!-- ЗАМЕНИТЕ на свои реальные контакты -->
+              <a class="contact-item" href="mailto:email@example.com">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                </span>
+                <span class="contact-text">
+                  <span class="contact-label">Email</span>
+                  <span class="contact-value">email@example.com</span>
+                </span>
+              </a>
+
+              <a class="contact-item" href="https://github.com/session24" target="_blank" rel="noopener noreferrer">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C17.2 4.7 18.2 5 18.2 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .4.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.6 18.4.5 12 .5Z"/></svg>
+                </span>
+                <span class="contact-text">
+                  <span class="contact-label">GitHub</span>
+                  <span class="contact-value">github.com/session24</span>
+                </span>
+              </a>
+
+              <!-- ЗАМЕНИТЕ @username на свой Telegram -->
+              <a class="contact-item" href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.4c-1.5 0-3-.4-4.2-1L3 20l1.2-4.9A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+                </span>
+                <span class="contact-text">
+                  <span class="contact-label">Telegram</span>
+                  <span class="contact-value">@yourusername</span>
+                </span>
+              </a>
+
+              <div class="contact-item contact-item-static">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                </span>
+                <span class="contact-text">
+                  <span class="contact-label">Ответ</span>
+                  <span class="contact-value">в течение 1 дня</span>
+                </span>
+              </div>
+            </div>
+
+            <form class="contact-form reveal" id="contactForm" novalidate>
+              <div class="field">
+                <label for="fieldName">Имя</label>
+                <input id="fieldName" name="name" type="text" placeholder="Как к вам обращаться" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="fieldEmail">Email</label>
+                <input id="fieldEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+              </div>
+              <div class="field">
+                <label for="fieldMessage">Сообщение</label>
+                <textarea id="fieldMessage" name="message" rows="5" placeholder="Расскажите о задаче: что нужно, сроки, бюджет" required></textarea>
+              </div>
+              <p class="form-error" id="formError" role="alert" hidden>Заполните имя, корректный email и сообщение.</p>
+              <button class="btn btn-primary btn-lg btn-full" type="submit">
+                Отправить сообщение
+                <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+              </button>
+              <p class="form-hint">Форма открывает ваш почтовый клиент с готовым письмом — ничего не отправляется без вашего участия.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ══════════ ПОДВАЛ ══════════ -->
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <a class="logo logo-footer" href="#home">
+          <span class="logo-mark" aria-hidden="true"></span>
+          <span class="logo-text">Миша<span class="logo-dot">.</span></span>
+        </a>
+        <p class="footer-note">Сделано на TypeScript + Vite · <span id="year">2026</span></p>
+        <nav class="footer-nav" aria-label="Навигация в подвале">
+          <a href="#services">Услуги</a>
+          <a href="#projects">Проекты</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
