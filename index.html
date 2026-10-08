@@ -71,39 +71,58 @@
       <section class="hero" id="home">
         <div class="hero-wash hero-wash-1" aria-hidden="true"></div>
         <div class="hero-wash hero-wash-2" aria-hidden="true"></div>
-        <div class="container">
-          <p class="eyebrow reveal">MishaBuilds — разработка сайтов и веб-приложений</p>
+        <div class="hero-dots" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow reveal">MishaBuilds — разработка сайтов и веб-приложений</p>
 
-          <h1 class="hero-title reveal">
-            Делаю сайты и веб-приложения под конкретную задачу
-          </h1>
+            <h1 class="hero-title reveal">
+              Делаю сайты и веб-приложения под конкретную задачу
+            </h1>
 
-          <p class="hero-sub reveal">
-            Меня зовут Миша. Проектирую, пишу код, тестирую и публикую: сайты,
-            интерактивные приложения, визуализации и небольшие инструменты.
-            Ниже — четыре законченных проекта. У каждого есть живая версия
-            и открытый код — можно открыть и проверить.
-          </p>
+            <p class="hero-sub reveal">
+              Меня зовут Миша. Проектирую, пишу код, тестирую и публикую: сайты,
+              интерактивные приложения, визуализации и небольшие инструменты.
+              Ниже — четыре законченных проекта. У каждого есть живая версия
+              и открытый код — можно открыть и проверить.
+            </p>
 
-          <div class="hero-cta reveal">
-            <a class="btn btn-large" href="#projects">Посмотреть проекты</a>
-            <a class="btn btn-large btn-quiet" href="#contacts">Обсудить проект</a>
+            <div class="hero-cta reveal">
+              <a class="btn btn-large" href="#projects">Посмотреть проекты</a>
+              <a class="btn btn-large btn-quiet" href="#contacts">Обсудить проект</a>
+            </div>
+
+            <dl class="hero-facts reveal">
+              <div>
+                <dt>Проекты</dt>
+                <dd>4 опубликованы</dd>
+              </div>
+              <div>
+                <dt>Код</dt>
+                <dd>открыт на GitHub</dd>
+              </div>
+              <div>
+                <dt>Стек</dt>
+                <dd>TypeScript, без фреймворков</dd>
+              </div>
+            </dl>
           </div>
 
-          <dl class="hero-facts reveal">
-            <div>
-              <dt>Проекты</dt>
-              <dd>4 опубликованы</dd>
+          <figure class="hero-demo reveal">
+            <div class="demo-frame">
+              <canvas
+                id="pathDemo"
+                tabindex="0"
+                role="img"
+                aria-label="Живая демонстрация: волна поиска пути обходит препятствия и находит кратчайший маршрут. Нажмите, чтобы сгенерировать заново."
+              ></canvas>
             </div>
-            <div>
-              <dt>Код</dt>
-              <dd>открыт на GitHub</dd>
-            </div>
-            <div>
-              <dt>Стек</dt>
-              <dd>TypeScript, без фреймворков</dd>
-            </div>
-          </dl>
+            <figcaption class="demo-caption">
+              <span>поиск в ширину · live</span>
+              <span id="demoStat">шаг 0 · путь 0</span>
+            </figcaption>
+            <p class="demo-hint">нажмите на поле — будет новый лабиринт</p>
+          </figure>
         </div>
       </section>
 
@@ -122,6 +141,7 @@
           <div class="projects">
             <!-- 3D Maze -->
             <article class="project reveal">
+              <span class="project-index" aria-hidden="true">01</span>
               <a
                 class="project-media"
                 href="https://mishabuilds.github.io/3d-maze/"
@@ -185,6 +205,7 @@
 
             <!-- Sorting Visualizer -->
             <article class="project reveal">
+              <span class="project-index" aria-hidden="true">02</span>
               <a
                 class="project-media"
                 href="https://mishabuilds.github.io/sorting-visualizer/"
@@ -248,6 +269,7 @@
 
             <!-- Rubik's Cube -->
             <article class="project reveal">
+              <span class="project-index" aria-hidden="true">03</span>
               <a
                 class="project-media"
                 href="https://mishabuilds.github.io/rubiks-cube/"
@@ -312,6 +334,7 @@
 
             <!-- Ant Colony Simulator -->
             <article class="project reveal">
+              <span class="project-index" aria-hidden="true">04</span>
               <a
                 class="project-media"
                 href="https://mishabuilds.github.io/ant-colony-simulator/"

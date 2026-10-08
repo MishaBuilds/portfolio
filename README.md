@@ -17,6 +17,7 @@
 │   └── og-cover.png      — картинка для соцсетей (1200×630)
 ├── src/
 │   ├── main.ts           — меню, scroll-spy, появление при скролле, год
+│   ├── demo.ts           — живое BFS-демо в hero (ванильный canvas, без зависимостей)
 │   └── style.css         — светлая дизайн-система, адаптив
 ├── .github/workflows/
 │   └── deploy.yml        — автоматический деплой на GitHub Pages

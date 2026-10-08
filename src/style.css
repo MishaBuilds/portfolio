@@ -230,9 +230,9 @@ ol {
   flex-direction: column;
   justify-content: center;
   gap: 6px;
-  width: 42px;
-  height: 42px;
-  padding: 0 10px;
+  width: 44px;
+  height: 44px;
+  padding: 0 11px;
   background: none;
   border: 1px solid var(--line-strong);
   border-radius: 10px;
@@ -257,7 +257,70 @@ ol {
 
 /* ── Hero ──────────────────────────────────────────────── */
 .hero {
-  padding: clamp(72px, 11vw, 148px) 0 clamp(56px, 7vw, 96px);
+  padding: clamp(56px, 8vw, 110px) 0 clamp(56px, 7vw, 96px);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: clamp(40px, 5vw, 72px);
+  align-items: center;
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.hero-copy .hero-sub {
+  max-width: 46ch;
+}
+
+/* Живое демо — фирменный якорь */
+.hero-demo {
+  margin: 0;
+  min-width: 0;
+}
+
+.demo-frame {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 4px);
+  box-shadow:
+    0 1px 2px rgba(23, 23, 28, 0.06),
+    0 32px 64px -40px rgba(23, 23, 28, 0.3);
+  overflow: hidden;
+}
+
+.demo-frame canvas {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+}
+
+.demo-caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 18px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.demo-caption span:last-child {
+  color: var(--accent-ink);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.demo-hint {
+  margin-top: 10px;
+  font-size: 13.5px;
+  color: var(--faint);
 }
 
 .eyebrow {
@@ -270,11 +333,11 @@ ol {
 }
 
 .hero-title {
-  font-size: clamp(38px, 6.2vw, 76px);
-  line-height: 1.06;
+  font-size: clamp(34px, 4.4vw, 58px);
+  line-height: 1.08;
   letter-spacing: -0.032em;
   font-weight: 800;
-  max-width: 16ch;
+  max-width: 14ch;
   text-wrap: balance;
 }
 
@@ -366,6 +429,7 @@ ol {
 }
 
 .project {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   gap: 0;
@@ -373,6 +437,30 @@ ol {
   border: 1px solid var(--line);
   border-radius: calc(var(--radius) + 4px);
   overflow: hidden;
+  box-shadow:
+    0 1px 2px rgba(23, 23, 28, 0.05),
+    0 28px 56px -40px rgba(23, 23, 28, 0.28);
+}
+
+/* Редакционный номер поверх превью — мотив «чертежа» */
+.project-index {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  z-index: 3;
+  font-size: clamp(64px, 7vw, 104px);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--paper);
+  opacity: 0.94;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+  transition: transform 0.35s var(--ease);
+}
+
+.project:hover .project-index {
+  transform: translateY(-4px);
 }
 
 .project-media {
@@ -691,6 +779,7 @@ ol {
 .hero-sub.reveal { transition-delay: 0.2s; }
 .hero-cta.reveal { transition-delay: 0.3s; }
 .hero-facts.reveal { transition-delay: 0.42s; }
+.hero-demo.reveal { transition-delay: 0.35s; }
 
 /* Stagger: соседние элементы секций */
 .service.reveal:nth-child(2) { transition-delay: 0.06s; }
@@ -719,6 +808,16 @@ body::before {
 .hero {
   position: relative;
   overflow: hidden;
+}
+
+.hero-dots {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(23, 23, 28, 0.08) 1px, transparent 1px);
+  background-size: 26px 26px;
+  mask-image: linear-gradient(100deg, transparent 30%, #000 75%);
+  -webkit-mask-image: linear-gradient(100deg, transparent 30%, #000 75%);
 }
 
 .hero-wash {
@@ -1025,6 +1124,30 @@ body::before {
 
   .burger {
     display: flex;
+  }
+
+  /* Mobile — отдельная композиция hero: текст, затем компактное демо */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .hero-copy .hero-sub {
+    max-width: 62ch;
+  }
+
+  .demo-frame canvas {
+    aspect-ratio: 16 / 10;
+  }
+
+  .demo-hint {
+    font-size: 13px;
+  }
+
+  .project-index {
+    font-size: clamp(56px, 17vw, 84px);
+    top: 8px;
+    left: 16px;
   }
 
   .project-facts {

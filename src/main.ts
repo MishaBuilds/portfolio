@@ -1,8 +1,11 @@
 /**
  * MishaBuilds — клиентская логика.
- * Мобильное меню, состояние шапки, scroll-spy, появление при скролле, год.
+ * Мобильное меню, состояние шапки, scroll-spy, появление при скролле,
+ * прогресс скролла, свет за курсором, живое BFS-демо в hero, год.
  * Без зависимостей.
  */
+
+import { initPathDemo } from './demo';
 
 function qs<T extends Element>(selector: string, root: ParentNode = document): T | null {
   return root.querySelector<T>(selector);
@@ -135,6 +138,11 @@ if (finePointer && !calmMotion) {
     media.addEventListener('pointerleave', () => media.classList.remove('lit'));
   });
 }
+
+/* ── Живое демо в hero ───────────────────────────────── */
+const demoCanvas = qs<HTMLCanvasElement>('#pathDemo');
+const demoStat = qs<HTMLElement>('#demoStat');
+if (demoCanvas) initPathDemo(demoCanvas, demoStat);
 
 /* ── Год в подвале ───────────────────────────────────── */
 const yearEl = qs<HTMLElement>('#year');
