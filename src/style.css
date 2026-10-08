@@ -1142,6 +1142,13 @@ a.contact-item:hover {
   font-size: 15.5px;
 }
 
+.contacts-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 6px;
+}
+
 .contact-form {
   background: var(--surface);
   border: 1px solid var(--border);

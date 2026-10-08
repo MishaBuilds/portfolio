@@ -60,8 +60,9 @@ npm run preview    # просмотр собранной версии локал
 
 - [x] `index.html`: `og:*`, `canonical` — указаны как
       `MishaBuilds`/`portfolio` (активируются после первого деплоя)
-- [ ] `index.html` → раздел «Контакты»: email и Telegram (`@yourusername`)
-- [ ] `src/main.ts`: константа `CONTACT_EMAIL`
+- [x] `index.html` → раздел «Контакты»: email `micaelss061111@gmail.com`,
+      Telegram `@skyprop` (https://t.me/skyprop)
+- [x] `src/main.ts`: константа `CONTACT_EMAIL`
 - [ ] Добавить `assets/og-cover.png` (картинка для соцсетей, 1200×630)
 - [ ] Кнопки «Открыть проект»/«GitHub» — добавляются в карточки проектов
       в `index.html` после публикации самих проектов

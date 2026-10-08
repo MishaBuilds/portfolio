@@ -148,7 +148,7 @@ counters.forEach((counter) => counterObserver.observe(counter));
 /* ── Форма обратной связи → mailto ───────────────────── */
 const form = qs<HTMLFormElement>('#contactForm');
 const formError = qs<HTMLElement>('#formError');
-const CONTACT_EMAIL = 'email@example.com'; // ЗАМЕНИТЕ на свой email
+const CONTACT_EMAIL = 'micaelss061111@gmail.com';
 
 form?.addEventListener('submit', (event) => {
   event.preventDefault();
