@@ -603,6 +603,76 @@ h4 {
   font-weight: 500;
 }
 
+.service-card p.service-benefit {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border-strong);
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+/* ── Кому я могу помочь ────────────────────────────────────── */
+.audience {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) 1fr;
+  gap: 26px 34px;
+  margin-top: 26px;
+  padding: 30px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.audience-head h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.audience-head p {
+  color: var(--text-muted);
+  font-size: 14.5px;
+}
+
+.audience-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 24px;
+  align-content: start;
+}
+
+.audience-list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+
+.audience-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gradient);
+}
+
+.audience-list li:last-child {
+  grid-column: 1 / -1;
+}
+
+.audience-list strong {
+  display: block;
+  color: var(--text);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.audience-list span {
+  color: var(--text-muted);
+}
+
 /* ── Проекты ───────────────────────────────────────────────── */
 .filters {
   display: flex;
@@ -1272,6 +1342,10 @@ a.contact-item:hover {
     grid-template-columns: 1fr;
   }
 
+  .audience {
+    grid-template-columns: 1fr;
+  }
+
   .contacts-grid {
     grid-template-columns: 1fr;
   }
@@ -1307,6 +1381,16 @@ a.contact-item:hover {
   }
 
   .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .audience {
+    grid-template-columns: 1fr;
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .audience-list {
     grid-template-columns: 1fr;
   }
 
