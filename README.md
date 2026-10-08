@@ -1,18 +1,23 @@
-# Портфолио разработчика
+# MishaBuilds — портфолио
 
-Современное портфолио на TypeScript + Vite: интерактивные веб-приложения,
-3D-визуализации, симуляторы, браузерные инструменты и Telegram-боты.
+Сайт-портфолио: https://mishabuilds.github.io/portfolio/
+
+Спокойный светлый дизайн, строгая типографика, без фреймворков.
+Разделы: проекты (4 опубликованных, у каждого live-демо и GitHub),
+услуги, кому подойдёт, процесс, контакты.
 
 ## Структура
 
 ```
 Мое портфолио/
-├── index.html            — разметка и SEO (title, description, OG, favicon)
+├── index.html            — разметка, SEO (title, description, OG, favicon)
 ├── favicon.svg           — иконка сайта
-├── assets/               — картинки (превью проектов)
+├── assets/
+│   ├── previews/         — скриншоты живых проектов (jpg, 1280×800)
+│   └── og-cover.png      — картинка для соцсетей (1200×630)
 ├── src/
-│   ├── main.ts           — меню, scroll-spy, анимации, фильтр, форма
-│   └── style.css         — дизайн-система, тёмная тема, адаптив
+│   ├── main.ts           — меню, scroll-spy, появление при скролле, год
+│   └── style.css         — светлая дизайн-система, адаптив
 ├── .github/workflows/
 │   └── deploy.yml        — автоматический деплой на GitHub Pages
 ├── package.json
@@ -35,37 +40,19 @@ npm run build      # typecheck + сборка в dist/
 npm run preview    # просмотр собранной версии локально
 ```
 
-## Публикация на GitHub Pages
+## Проекты в портфолио
 
-1. Создайте репозиторий на GitHub (например, `portfolio`).
-2. Загрузите код:
+| Проект | Live | GitHub |
+|---|---|---|
+| 3D Maze | https://mishabuilds.github.io/3d-maze/ | https://github.com/MishaBuilds/3d-maze |
+| Sorting Visualizer | https://mishabuilds.github.io/sorting-visualizer/ | https://github.com/MishaBuilds/sorting-visualizer |
+| Rubik's Cube | https://mishabuilds.github.io/rubiks-cube/ | https://github.com/MishaBuilds/rubiks-cube |
+| Ant Colony Simulator | https://mishabuilds.github.io/ant-colony-simulator/ | https://github.com/MishaBuilds/ant-colony-simulator |
 
-   ```bash
-   git init
-   git add .
-   git commit -m "Portfolio"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/portfolio.git
-   git push -u origin main
-   ```
+## Контакты на сайте
 
-3. В репозитории: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-4. Workflow `.github/workflows/deploy.yml` соберёт сайт и опубликует его.
-5. Сайт будет доступен по адресу: **https://YOUR_USERNAME.github.io/portfolio/**
-
-> Сборка использует относительные пути (`base: './'`), поэтому сайт корректно
-> работает и из подкаталога, и из корня пользовательского сайта.
-
-## Что нужно заполнить перед публикацией
-
-- [x] `index.html`: `og:*`, `canonical` — указаны как
-      `MishaBuilds`/`portfolio` (активируются после первого деплоя)
-- [x] `index.html` → раздел «Контакты»: email `micaelss061111@gmail.com`,
-      Telegram `@skyprop` (https://t.me/skyprop)
-- [x] `src/main.ts`: константа `CONTACT_EMAIL`
-- [ ] Добавить `assets/og-cover.png` (картинка для соцсетей, 1200×630)
-- [ ] Кнопки «Открыть проект»/«GitHub» — добавляются в карточки проектов
-      в `index.html` после публикации самих проектов
+- Telegram: [@skyprop](https://t.me/skyprop)
+- Email: micaelss061111@gmail.com
 
 ## Стек
 
