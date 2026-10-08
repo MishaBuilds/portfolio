@@ -785,6 +785,7 @@ ol {
 .service.reveal:nth-child(2) { transition-delay: 0.06s; }
 .service.reveal:nth-child(3) { transition-delay: 0.12s; }
 .service.reveal:nth-child(4) { transition-delay: 0.18s; }
+.service.reveal:nth-child(5) { transition-delay: 0.24s; }
 .who .reveal:nth-child(2) { transition-delay: 0.08s; }
 .who .reveal:nth-child(3) { transition-delay: 0.12s; }
 .who .reveal:nth-child(4) { transition-delay: 0.16s; }
