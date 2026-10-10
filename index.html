@@ -8,7 +8,7 @@
     <title>MishaBuilds — разработка сайтов и веб-приложений</title>
     <meta
       name="description"
-      content="MishaBuilds: сайты, интерактивные веб-приложения, визуализации и инструменты под конкретную задачу. Реальные проекты с live-демо и открытым кодом: 3D Maze, Sorting Visualizer, Rubik's Cube, Ant Colony Simulator."
+      content="MishaBuilds: сайты, интерактивные веб-приложения, визуализации и инструменты под конкретную задачу. Реальные проекты с live-демо и открытым кодом: 3D Maze, Sorting Visualizer, Rubik's Cube, Ant Colony Simulator, BarberFlow."
     />
     <meta name="author" content="MishaBuilds" />
     <meta name="theme-color" content="#f6f5f1" />
@@ -19,7 +19,7 @@
     <meta property="og:title" content="MishaBuilds — разработка сайтов и веб-приложений" />
     <meta
       property="og:description"
-      content="Сайты, веб-приложения, визуализации и инструменты под конкретную задачу. Четыре законченных проекта — с живой версией и открытым кодом."
+      content="Сайты, веб-приложения, визуализации и инструменты под конкретную задачу. Пять законченных проектов — с живой версией и открытым кодом."
     />
     <meta property="og:url" content="https://mishabuilds.github.io/portfolio/" />
     <meta property="og:image" content="./assets/og-cover.png" />
@@ -84,7 +84,7 @@
               Меня зовут Миша. Проектирую, пишу код, тестирую и публикую: сайты,
               интерактивные приложения, Telegram-боты, визуализации и небольшие
               инструменты.
-              Ниже — четыре законченных проекта. У каждого есть живая версия
+              Ниже — пять законченных проектов. У каждого есть живая версия
               и открытый код — можно открыть и проверить.
             </p>
 
@@ -96,7 +96,7 @@
             <dl class="hero-facts reveal">
               <div>
                 <dt>Проекты</dt>
-                <dd>4 опубликованы</dd>
+                <dd>5 опубликовано</dd>
               </div>
               <div>
                 <dt>Код</dt>
@@ -385,6 +385,70 @@
                     <a
                       class="btn btn-small btn-quiet"
                       href="https://github.com/MishaBuilds/ant-colony-simulator"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C17.2 4.7 18.2 5 18.2 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .4.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.6 18.4.5 12 .5Z"/></svg>
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- BarberFlow -->
+            <article class="project reveal">
+              <span class="project-index" aria-hidden="true">05</span>
+              <a
+                class="project-media"
+                href="https://mishabuilds.github.io/barberflow/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Открыть live-демо проекта BarberFlow"
+              >
+                <img
+                  src="./assets/previews/barberflow.jpg"
+                  alt="BarberFlow: первый экран демо-сайта барбершопа и карточка ближайших окон записи"
+                  loading="lazy"
+                  width="1280"
+                  height="800"
+                />
+              </a>
+              <div class="project-body">
+                <div class="project-top">
+                  <h3 class="project-title">BarberFlow</h3>
+                  <span class="status">Опубликован</span>
+                </div>
+                <p class="project-lede">
+                  Сайт-витрина барбершопа с онлайн-записью в честном
+                  демо-режиме — плюс Telegram-бот для той же записи.
+                </p>
+                <ul class="project-facts">
+                  <li>Запись за пять шагов: услуга, мастер, дата и время, контакты, подтверждение — с возвратом назад без потери выбора</li>
+                  <li>Занятые слоты выбрать нельзя, телефон и имя валидируются, записи живут в localStorage и отменяются в один клик</li>
+                  <li>Telegram-бот на том же сценарии: Python, SQLite, атомарное бронирование транзакцией против двойной записи</li>
+                  <li>Проверено в headless-браузере на ширинах 320–1920: ноль JS-ошибок, ноль горизонтального переполнения</li>
+                </ul>
+                <div class="project-meta">
+                  <ul class="tech" aria-label="Технологии проекта BarberFlow">
+                    <li>HTML/CSS/JS</li>
+                    <li>Python</li>
+                    <li>SQLite</li>
+                    <li>GitHub Pages</li>
+                  </ul>
+                  <div class="project-links">
+                    <a
+                      class="btn btn-small"
+                      href="https://mishabuilds.github.io/barberflow/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Открыть проект
+                      <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+                    </a>
+                    <a
+                      class="btn btn-small btn-quiet"
+                      href="https://github.com/MishaBuilds/barberflow"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
