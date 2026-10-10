@@ -8,7 +8,7 @@
     <title>MishaBuilds — разработка сайтов и веб-приложений</title>
     <meta
       name="description"
-      content="MishaBuilds: сайты, интерактивные веб-приложения, визуализации и инструменты под конкретную задачу. Реальные проекты с live-демо и открытым кодом: 3D Maze, Sorting Visualizer, Rubik's Cube, Ant Colony Simulator, BarberFlow."
+      content="MishaBuilds: сайты, интерактивные веб-приложения, визуализации и инструменты под конкретную задачу. Реальные проекты с live-демо и открытым кодом: 3D Maze, Sorting Visualizer, Rubik's Cube, Ant Colony Simulator, FlowForge, BarberFlow."
     />
     <meta name="author" content="MishaBuilds" />
     <meta name="theme-color" content="#f6f5f1" />
@@ -19,7 +19,7 @@
     <meta property="og:title" content="MishaBuilds — разработка сайтов и веб-приложений" />
     <meta
       property="og:description"
-      content="Сайты, веб-приложения, визуализации и инструменты под конкретную задачу. Пять законченных проектов — с живой версией и открытым кодом."
+      content="Сайты, веб-приложения, визуализации и инструменты под конкретную задачу. Шесть законченных проектов — с живой версией и открытым кодом."
     />
     <meta property="og:url" content="https://mishabuilds.github.io/portfolio/" />
     <meta property="og:image" content="./assets/og-cover.png" />
@@ -84,7 +84,7 @@
               Меня зовут Миша. Проектирую, пишу код, тестирую и публикую: сайты,
               интерактивные приложения, Telegram-боты, визуализации и небольшие
               инструменты.
-              Ниже — пять законченных проектов. У каждого есть живая версия
+              Ниже — шесть законченных проектов. У каждого есть живая версия
               и открытый код — можно открыть и проверить.
             </p>
 
@@ -96,7 +96,7 @@
             <dl class="hero-facts reveal">
               <div>
                 <dt>Проекты</dt>
-                <dd>5 опубликовано</dd>
+                <dd>6 опубликовано</dd>
               </div>
               <div>
                 <dt>Код</dt>
@@ -341,11 +341,11 @@
                 href="https://mishabuilds.github.io/ant-colony-simulator/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Открыть live-демо проекта Ant Colony Simulator"
+                aria-label="Открыть live-демо проекта Ant Colony Simulator 2.0"
               >
                 <img
                   src="./assets/previews/ant-colony.jpg"
-                  alt="Ant Colony Simulator: поле симуляции и панель статистики"
+                  alt="Ant Colony Simulator 2.0: поле симуляции с феромонными тропами и панель лаборатории"
                   loading="lazy"
                   width="1280"
                   height="800"
@@ -353,24 +353,26 @@
               </a>
               <div class="project-body">
                 <div class="project-top">
-                  <h3 class="project-title">Ant Colony Simulator</h3>
+                  <h3 class="project-title">Ant Colony Simulator 2.0</h3>
                   <span class="status">Опубликован</span>
                 </div>
                 <p class="project-lede">
-                  Симулятор муравьиной колонии: тысячи простых агентов сами
-                  прокладывают короткие маршруты.
+                  Лаборатория стигмергии: муравьи сами прокладывают
+                  короткие маршруты — а вы меняете условия и
+                  сравниваете результаты.
                 </p>
                 <ul class="project-facts">
-                  <li>До 5000 муравьёв, два феромонных поля с испарением и диффузией</li>
-                  <li>6 сценариев карт, скорость до 50×, пошаговый режим и инспектор отдельного муравья</li>
-                  <li>Живая статистика: доставки, длина маршрутов, FPS</li>
-                  <li>Ноль зависимостей: чистый TypeScript и Canvas 2D, ядро отделено от интерфейса и покрыто тестами</li>
+                  <li>Редактор мира: еда, гнездо, стены и ластик прямо на карте, восстановление карты из сида</li>
+                  <li>Лаборатория: пресеты поведения, сид карты, таймерные эксперименты с автопаузой, экспорт и импорт конфигураций</li>
+                  <li>Сравнение запусков: снапшоты прогонов, кривые доставок и исследования, таблица метрик с победителями</li>
+                  <li>Инспектор муравья с показом сенсоров и решений; ядро покрыто 79 тестами, исправлено чтение феромонных сенсоров</li>
                 </ul>
                 <div class="project-meta">
-                  <ul class="tech" aria-label="Технологии проекта Ant Colony Simulator">
+                  <ul class="tech" aria-label="Технологии проекта Ant Colony Simulator 2.0">
                     <li>TypeScript</li>
                     <li>Canvas 2D</li>
                     <li>ES-модули</li>
+                    <li>79 тестов</li>
                   </ul>
                   <div class="project-links">
                     <a
@@ -396,9 +398,74 @@
               </div>
             </article>
 
-            <!-- BarberFlow -->
+            <!-- FlowForge -->
             <article class="project reveal">
               <span class="project-index" aria-hidden="true">05</span>
+              <a
+                class="project-media"
+                href="https://mishabuilds.github.io/flowforge/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Открыть live-демо проекта FlowForge"
+              >
+                <img
+                  src="./assets/previews/flowforge.jpg"
+                  alt="FlowForge: редактор сценария из блоков, линии связей и журнал выполнения"
+                  loading="lazy"
+                  width="1600"
+                  height="1012"
+                />
+              </a>
+              <div class="project-body">
+                <div class="project-top">
+                  <h3 class="project-title">FlowForge</h3>
+                  <span class="status">Опубликован</span>
+                </div>
+                <p class="project-lede">
+                  Визуальный конструктор автоматизаций: соберите
+                  сценарий из блоков и наблюдайте, как он
+                  исполняется прямо в браузере.
+                </p>
+                <ul class="project-facts">
+                  <li>Граф-редактор: блоки Start, Action, Condition, Delay и End; связи привязаны к портам, некорректные соединения объясняются</li>
+                  <li>Настоящий движок выполнения: условия ветвятся на true/false, переменные передаются между блоками, вычисления считаются</li>
+                  <li>Отладка: запуск, пошаговый режим, пауза — даже внутри задержки, — сброс, журнал операций и защита от циклов</li>
+                  <li>Шаблоны сценариев, сохранение в localStorage, экспорт и импорт JSON; 41 автотест, интерфейс проверен на ширинах 320–1920</li>
+                </ul>
+                <div class="project-meta">
+                  <ul class="tech" aria-label="Технологии проекта FlowForge">
+                    <li>TypeScript</li>
+                    <li>Vite</li>
+                    <li>SVG</li>
+                    <li>Vitest</li>
+                  </ul>
+                  <div class="project-links">
+                    <a
+                      class="btn btn-small"
+                      href="https://mishabuilds.github.io/flowforge/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Открыть проект
+                      <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+                    </a>
+                    <a
+                      class="btn btn-small btn-quiet"
+                      href="https://github.com/MishaBuilds/flowforge"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C17.2 4.7 18.2 5 18.2 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .4.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.6 18.4.5 12 .5Z"/></svg>
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- BarberFlow -->
+            <article class="project reveal">
+              <span class="project-index" aria-hidden="true">06</span>
               <a
                 class="project-media"
                 href="https://mishabuilds.github.io/barberflow/"

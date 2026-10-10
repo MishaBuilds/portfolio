@@ -3,7 +3,7 @@
 Сайт-портфолио: https://mishabuilds.github.io/portfolio/
 
 Спокойный светлый дизайн, строгая типографика, без фреймворков.
-Разделы: проекты (4 опубликованных, у каждого live-демо и GitHub),
+Разделы: проекты (6 опубликованных, у каждого live-демо и GitHub),
 услуги, кому подойдёт, процесс, контакты.
 
 ## Структура
@@ -48,7 +48,9 @@ npm run preview    # просмотр собранной версии локал
 | 3D Maze | https://mishabuilds.github.io/3d-maze/ | https://github.com/MishaBuilds/3d-maze |
 | Sorting Visualizer | https://mishabuilds.github.io/sorting-visualizer/ | https://github.com/MishaBuilds/sorting-visualizer |
 | Rubik's Cube | https://mishabuilds.github.io/rubiks-cube/ | https://github.com/MishaBuilds/rubiks-cube |
-| Ant Colony Simulator | https://mishabuilds.github.io/ant-colony-simulator/ | https://github.com/MishaBuilds/ant-colony-simulator |
+| Ant Colony Simulator 2.0 | https://mishabuilds.github.io/ant-colony-simulator/ | https://github.com/MishaBuilds/ant-colony-simulator |
+| FlowForge | https://mishabuilds.github.io/flowforge/ | https://github.com/MishaBuilds/flowforge |
+| BarberFlow | https://mishabuilds.github.io/barberflow/ | https://github.com/MishaBuilds/barberflow |
 
 ## Контакты на сайте
 
